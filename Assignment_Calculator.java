@@ -36,11 +36,14 @@ public class Assignment_Calculator{
     public static void start(){
         double num_1 = 0, number = 0;
 		int operator = 0;
+		boolean success = false;
 
 		Scanner input = new Scanner(System.in);
 		do{
 			clearConsole();
-			result = operation(operator, number);
+			if (success){
+				result = operation(operator, number);
+			}
 			System.out.println("Calculator");
 			System.out.println("==================");
 			System.out.printf("Total = %.2f", result);
@@ -54,6 +57,7 @@ public class Assignment_Calculator{
 					System.out.print("Input number : ");
 					result = input.nextDouble();
 				} catch(Exception e){
+					input.nextLine();
 					continue;
 				}
 			}
@@ -70,16 +74,21 @@ public class Assignment_Calculator{
 				if(operator < 1 || operator > 7){
 					continue;
 				}
-				if (result > 0){
+				if (result > 0 && operator < 6){
 					System.out.print("Input number : ");
 					try{
 						number = input.nextDouble();
+						success = true;
 					} catch(Exception e){
+						success = false;
+						input.nextLine();
 						continue;
 					}
 				}
-
+				success = true;
 			} catch(Exception e){
+				success = false;
+				input.nextLine();
 				continue;
 			}
 
