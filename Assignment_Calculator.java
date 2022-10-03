@@ -8,12 +8,12 @@ public class Assignment_Calculator{
 	public static void clearConsole(){
 		try{
 			if(System.getProperty("os.name").contains("Windows")){
-					new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+				new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
 			} else{
-					System.out.print("\033\143");
+				System.out.print("\033\143");
 			}
 		} catch (IOException | InterruptedException ex) {}
-    }
+	}
 
 	public static double operation(int operator, double num){
 		switch(operator){
@@ -33,8 +33,8 @@ public class Assignment_Calculator{
 		return 0;
 	}
 
-    public static void start(){
-        double num_1 = 0, number = 0;
+	public static void start(){
+		double num_1 = 0, number = 0;
 		int operator = 0;
 		boolean success = false;
 
