@@ -5,6 +5,7 @@ import java.io.IOException;
 public class Assignment_Calculator{
 	public static double result = 0;
 
+	// Link Refrensi (Stackoverflow) : https://stackoverflow.com/a/38365871
 	public static void clearConsole(){
 		try{
 			if(System.getProperty("os.name").contains("Windows")){
@@ -34,7 +35,7 @@ public class Assignment_Calculator{
 	}
 
 	public static void start(){
-		double num_1 = 0, number = 0;
+		double number = 0;
 		int operator = 0;
 		boolean success = false;
 
