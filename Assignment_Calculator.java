@@ -37,6 +37,18 @@ public class Assignment_Calculator{
 		return 0;
 	}
 	
+	// Buat function "menu" untuk menampilkan menu kalkulator
+	public static void menu(){
+		System.out.println(" 1. Addition");
+		System.out.println(" 2. Subtraction");
+		System.out.println(" 3. Multiplication");
+		System.out.println(" 4. Division");
+		System.out.println(" 5. Modulo");
+		System.out.println(" 6. Clear total");
+		System.out.println(" 7. Exit");
+		System.out.print(" Operator [1...7]: ");
+	}
+
 	// Buat function "main" untuk menjalankan logika program
 	public static void main(String[] args){
 		double number = 0;
@@ -73,28 +85,19 @@ public class Assignment_Calculator{
 			}
 
 			if(success){
-				System.out.println(" 1. Addition");
-				System.out.println(" 2. Subtraction");
-				System.out.println(" 3. Multiplication");
-				System.out.println(" 4. Division");
-				System.out.println(" 5. Modulo");
-				System.out.println(" 6. Clear total");
-				System.out.println(" 7. Exit");
-				System.out.printf(" Operator [1...7]: %d", operator);
+				menu();
+				System.out.printf("%d", operator);
 				System.out.println("");
 
 				try{
-					if (result > 0 && operator < 6){
-						System.out.print(" Input number : ");
+					System.out.print(" Input number : ");
 
-						try{
-							number = input.nextDouble();
-							success2 = true;
-						} catch(Exception e){
-							success2 = false;
-							input.nextLine();
-							continue;
-						}
+					try{
+						number = input.nextDouble();
+					} catch(Exception e){
+						success2 = false;
+						input.nextLine();
+						continue;
 					}
 
 					success2 = true;
@@ -104,14 +107,7 @@ public class Assignment_Calculator{
 					continue;
 				}
 			} else{
-				System.out.println(" 1. Addition");
-				System.out.println(" 2. Subtraction");
-				System.out.println(" 3. Multiplication");
-				System.out.println(" 4. Division");
-				System.out.println(" 5. Modulo");
-				System.out.println(" 6. Clear total");
-				System.out.println(" 7. Exit");
-				System.out.print(" Operator [1...7]: ");
+				menu();
 
 				try{
 					operator = input.nextInt();
