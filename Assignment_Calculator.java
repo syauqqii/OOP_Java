@@ -53,16 +53,16 @@ public class Assignment_Calculator{
 	public static void main(String[] args){
 		double number = 0;
 		int operator = 0;
-		boolean booloperator = false, boolNumber = false;
+		boolean boolOperator = false, boolNumber = false;
 
 		Scanner input = new Scanner(System.in);
 
 		do{
 			clearConsole();
 
-			if (boolNumber){
+			if (boolOperator && boolNumber){
 				result = operation(operator, number);
-				booloperator = false;
+				boolOperator = false;
 				boolNumber = false;
 			}
 
@@ -85,7 +85,7 @@ public class Assignment_Calculator{
 				}
 			}
 
-			if(booloperator){
+			if(boolOperator){
 				menu();
 				System.out.printf("%d", operator);
 				System.out.println("");
@@ -118,7 +118,7 @@ public class Assignment_Calculator{
 					}
 
 					if (result > 0 && operator < 6){
-						booloperator = true;
+						boolOperator = true;
 						System.out.print(" Input number : ");
 
 						try{
