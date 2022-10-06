@@ -1,11 +1,12 @@
 import java.util.Scanner;
 import java.io.IOException;
 
-
 public class Assignment_Calculator{
+	// Buat global variabel bernama "result" dengan tipe data double
 	public static double result = 0;
 
 	// Link Refrensi (Stackoverflow) : https://stackoverflow.com/a/38365871
+	// Buat function untuk membersihkan console (command line interface)
 	public static void clearConsole(){
 		try{
 			if(System.getProperty("os.name").contains("Windows")){
@@ -16,6 +17,7 @@ public class Assignment_Calculator{
 		} catch (IOException | InterruptedException ex) {}
 	}
 
+	// Buat function "operation" untuk pengoperasian matematis kalkulator
 	public static double operation(int operator, double num){
 		switch(operator){
 			case 1:
@@ -34,6 +36,7 @@ public class Assignment_Calculator{
 		return 0;
 	}
 
+	// Buat function "start" untuk pengoperasian alur program
 	public static void start(){
 		double number = 0;
 		int operator = 0;
@@ -100,6 +103,7 @@ public class Assignment_Calculator{
 
 	}
 	
+	// Buat function "main" untuk memulai program
 	public static void main(String[] args){
 		start();
 	}
