@@ -1,3 +1,4 @@
+// Tambahkan library
 import java.util.Scanner;
 import java.io.IOException;
 
@@ -35,19 +36,22 @@ public class Assignment_Calculator{
 		}
 		return 0;
 	}
-
-	// Buat function "start" untuk pengoperasian alur program
-	public static void start(){
+	
+	// Buat function "main" untuk menjalankan logika program
+	public static void main(String[] args){
 		double number = 0;
 		int operator = 0;
 		boolean success = false;
 
 		Scanner input = new Scanner(System.in);
+
 		do{
 			clearConsole();
+
 			if (success){
 				result = operation(operator, number);
 			}
+
 			System.out.println("Calculator");
 			System.out.println("==================");
 			System.out.printf("Total = %.2f", result);
@@ -55,7 +59,6 @@ public class Assignment_Calculator{
 			System.out.println("");
 			System.out.println("");
 
-			
 			if (result == 0){
 				try{
 					System.out.print("Input number : ");
@@ -65,6 +68,7 @@ public class Assignment_Calculator{
 					continue;
 				}
 			}
+
 			System.out.println("1. Addition");
 			System.out.println("2. Subtraction");
 			System.out.println("3. Multiplication");
@@ -73,6 +77,7 @@ public class Assignment_Calculator{
 			System.out.println("6. Clear Total");
 			System.out.println("7. Exit");
 			System.out.print("Operator [1...7]: ");
+
 			try{
 				operator = input.nextInt();
 				if(operator < 1 || operator > 7){
@@ -99,12 +104,7 @@ public class Assignment_Calculator{
 			if(operator == 7){
 				System.exit(0);
 			}
-		} while(true);
 
-	}
-	
-	// Buat function "main" untuk memulai program
-	public static void main(String[] args){
-		start();
+		} while(true);
 	}
 }
