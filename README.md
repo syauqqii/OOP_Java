@@ -1,3 +1,3 @@
 # Informasi
 
-Ini adalah sebuah latihan yang diberikan oleh dosen dari mata kuliah OOP Java.
+Ini adalah sebuah latihan yang diberikan oleh dosen dari mata kuliah Object Oriented Programming (OOP).
