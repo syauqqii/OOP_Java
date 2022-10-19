@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.io.IOException;
 
-public class Asignment_soal{
+public class Asignment_Question{
 	public static void clearConsole(){
 		try{
 			if(System.getProperty("os.name").contains("Windows")){
