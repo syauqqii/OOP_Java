@@ -1,3 +1,3 @@
-# OOP Java
+# Penjelasan Repository
 
-Ini adalah sebuah latihan dari mata kuliah OOP Java.
+Ini adalah sebuah latihan yang diberikan oleh dosen dari mata kuliah OOP Java.
