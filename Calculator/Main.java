@@ -2,7 +2,7 @@
 import java.util.Scanner;
 import java.io.IOException;
 
-public class Assignment_Calculator{
+public class Main{
 	// Buat global variabel bernama "result" dengan tipe data double
 	public static double result = 0;
 
