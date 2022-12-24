@@ -138,6 +138,10 @@ public class Main{
 					continue;
 				}
 			}
+			
+			if(operator == 6){
+			    result = 0;
+			}
 
 			if(operator == 7){
 				System.exit(0);
